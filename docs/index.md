@@ -3,23 +3,26 @@
 layout: home
 
 hero:
-  name: "EthPaymaster Docs"
-  text: "Sponsor every TX"
-  tagline: My great project tagline
+  name: "ETHPaymaster Docs"
+  text: "Sponsor Every Tx!"
+  tagline: Leveraging the Power of Community for AA Eco!
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Quick start
+      link: /quick-start
     - theme: alt
       text: API Examples
       link: /api-examples
+    - theme: alt
+      text: API List
+      link: /api-list    
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Open-source 
+    details: Open-source Paymaster Framework, permissionless.
+  - title: Adaptable
+    details: Be Adaptable with ERC4337, EIP7702, RIP7560 and more.
+  - title: About AAStar
+    details: AAStar is an ethereum builder community that is a subgroup of Plancker^.
 ---
 
