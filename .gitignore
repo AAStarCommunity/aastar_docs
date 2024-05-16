@@ -1,0 +1,12 @@
+.vitepress/*
+.vitepress/dist
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+node_modules/
+
+.vscode/*
