@@ -9,13 +9,16 @@ hero:
   actions:
     - theme: brand
       text: Quick start
-      link: /quick-start
+      link: /quick-start/index.md
     - theme: alt
       text: API Examples
-      link: /api-examples
+      link: /api-examples/index.md
     - theme: alt
       text: API List
-      link: /api-list    
+      link: /api-list/index.md    
+    - theme: alt
+      text: Introduction
+      link: /introduction/index.md 
 
 features:
   - title: Open-source 
