@@ -14,10 +14,13 @@ export default defineConfig({
 
       sidebar: [
       {
-        text: 'Quick start',
+        text: 'Introduction',
         items: [
           { text: 'Quick start', link: '/quick-start/index.md' },
-          { text: 'Introduction', link: '/introduction/index.md' }
+          { text: 'Introduction', link: '/introduction/index.md' },
+          { text: '- Relay', link: '/introduction/relay-introduction.md' },
+          { text: '- Contract', link: '/introduction/contract-introduction.md' },
+          { text: '- Dashboard', link: '/introduction/dashboard-introduction.md' }
         ]
       },     
       {
