@@ -2,48 +2,29 @@
 outline: deep
 ---
 
-# Runtime API Examples
+# Deployment
+A simple deployment schema for common sponsor service runner or project customer grant sponsor runner.
+![](https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202405172006202.png)
 
-This page demonstrates usage of some of the runtime APIs provided by VitePress.
+## Components
+ETHPaymaster as a composable module for Ethereum, comprises three parts:
+1. Relay
+   1. A server to sign UserOps and maintain gas car(gas tank) account balance.
+2. Contract
+   1. A contract to communicate with Entrypoint and verify the signature maintain fee(deduction and refund). 
+3. Dashboard
+   1. A terminal to show visualized data and set the sponsor strategies.
+## Install
+1. Relay
+2. Contract
+3. Dashboard
 
-The main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:
+## Initiate settings
 
-```md
-<script setup>
-import { useData } from 'vitepress'
+## Success!
 
-const { theme, page, frontmatter } = useData()
-</script>
+## More settings
 
-## Results
-
-### Theme Data
-<pre>{{ theme }}</pre>
-
-### Page Data
-<pre>{{ page }}</pre>
-
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
-```
-
-<script setup>
-import { useData } from 'vitepress'
-
-const { site, theme, page, frontmatter } = useData()
-</script>
-
-## Results
-
-### Theme Data
-<pre>{{ theme }}</pre>
-
-### Page Data
-<pre>{{ page }}</pre>
-
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
 
 ## More
 
-Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).
