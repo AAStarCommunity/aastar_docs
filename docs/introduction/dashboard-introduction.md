@@ -32,6 +32,8 @@ Access key: 30f60d8f-cb72-4cf1-ab72-eccaa5142c68
 1. You will get a 10 time a day for a free test quota(a NFT on special chain).
 2. If you want put your project into real business, you need choose your plan.
 We have 3 plan:
+
+
 **Basic**
 It is suitable for a Beta version project, just integrate with AA sponsor ability and test it.
 TPS Concurrency: 3
@@ -73,6 +75,12 @@ It should send NFT to the sender address, the NFT is published by ETHPaymaster o
 To get the special NFT, buy from official website or on cooperation community interface.
 
 ##### Settings
+
+**Block list**
+A list which was hacker or bad guys will be blocked.
+
+**Star time/ End time**
+The strategy(series of settings) start and end time.
 
 **Limitations**
 Global Maximums
