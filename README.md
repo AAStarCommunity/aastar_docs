@@ -5,5 +5,4 @@
 ```sh
 pnpm install
 pnpm vitepress dev docs
-
 ```
