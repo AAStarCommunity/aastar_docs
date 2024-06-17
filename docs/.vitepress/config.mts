@@ -2,14 +2,15 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "ETHPaymaster",
+  title: "AAStar",
   description: "Sponsor Every Tx.!",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
         { text: 'Home', link: '/' },
-      { text: 'ETHPaymaster', link: 'https://ETHPaymaster.org' },
-      { text: 'AAStar', link: 'https://aastar.xyz' }
+        { text: 'AAStar', link: 'https://aastar.io/' },
+        { text: 'ETHPaymaster', link: 'https://ETHPaymaster.org' },
+      
     ],
 
       sidebar: [

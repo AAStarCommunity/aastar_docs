@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "ETHPaymaster Docs"
+  name: "AAStar Docs"
   text: "Sponsor Every Tx!"
   tagline: Leveraging the Power of Community for AA Eco!
   actions:

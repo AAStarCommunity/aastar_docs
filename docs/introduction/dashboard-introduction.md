@@ -11,28 +11,36 @@ Dashboard is one of the important components for data visualization.
 
 
 ## Fow who?
+
 We have different terminals which service for different target users.
 Now we open dashboard for individual sponsors, we will open dashboard for terminal users and project runners and more later.
 
 ### Individual Sponsor
+
 As a individual sponsor, you will run a signature service at a relay server based on our ETHPaymaster framework.
 Any developers want a gas sponsorship service, just send their UserOps to your API.
+
 #### API management
+
 ##### Apply
+
 Access this URL: [Get API key ](https://ethpaymaster.org/dash/apikey)
+
 1. Input your Email, project website and  daily user transaction number
 2. need attachment to verify, like snapshot, contract address in EtherScan), submit the form.
 3. The maintainer will check and give a manually or automatically answer.
 4. You will get a key like this in your Email:
+
 ```md
 Access key: 30f60d8f-cb72-4cf1-ab72-eccaa5142c68
 
 ```
+
 ##### Plans
+
 1. You will get a 10 time a day for a free test quota(a NFT on special chain).
 2. If you want put your project into real business, you need choose your plan.
 We have 3 plan:
-
 
 **Basic**
 It is suitable for a Beta version project, just integrate with AA sponsor ability and test it.
@@ -58,8 +66,8 @@ Cross chain: 3-10
 TPS Concurrency: 30
 Daily limitation: 50000
 
-
 ##### Rules
+
 Some specific rules in common transactions.
 
 **Mode**
@@ -157,6 +165,7 @@ Xai
 Zora
 
 #### Daily monitor
+
 Activity daily monitor
 
 #### Balance management

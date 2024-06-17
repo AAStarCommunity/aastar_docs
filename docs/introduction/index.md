@@ -1,11 +1,13 @@
 # What is ETHPaymaster?
 
 ## Introduction
+
 **AAStar** is committed to providing AA capability component public goods for Ethereum, try to answer the question: **How can we improve Ethereum accounts to fit into the future of mass adoption?**
 
 **ETHPaymaster** is a project supporting gas sponsors with cross-chain, multi-protocol, multi-type accounts, and more features, including smart contracts, relay, dashboard with control rules and one-key deployed docker images.
 
 ### Strength
+
 Compared to the Business, Closed Source, and Central Relay Paymasters, ETHPaymaster provides a Community, Open Source, Decentralized Paymaster Framework to Sponsor Every Transaction.
 
 The **unique** ETHPaymaster strengths for Ethereum are:
@@ -18,7 +20,6 @@ The **unique** ETHPaymaster strengths for Ethereum are:
 ### Flow
 
 ![](https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202403052039293.png)
-
 
 ## More
 
