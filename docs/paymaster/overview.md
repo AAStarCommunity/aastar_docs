@@ -28,7 +28,7 @@ The **unique** ETHPaymaster strengths for Ethereum are:
 
 ## More
 
-[full list of APIs](../api-list/index.md ).
+[full list of APIs](../paymaster/rpc_methods.md ).
 
 
 ---

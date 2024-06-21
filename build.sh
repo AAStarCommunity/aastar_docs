@@ -1,10 +1,10 @@
  #!/usr/bin/env sh
 
-# 忽略错误
+# ignore error
 set -e
 
-# 构建
+# build
 npm run docs:build
 
-# 进入待发布的目录
+# Enter the directory to be published.
 cd docs/.vitepress/dist
