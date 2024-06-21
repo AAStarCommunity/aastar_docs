@@ -13,7 +13,7 @@ export default defineConfig({
     title: "AAStar",
     description: "Abstract Account Sponsor Every Tx.!",
     head: [
-        ['link', {rel: 'icon', type: 'image/svg+xml', href: '/startlogo.svg'}],
+        ['link', {rel: 'icon', type: 'image/svg+xml', href: 'https://docs.aastar.io/startlogo.svg'}],
         ['meta', {name: 'theme-color', content: '#5f67ee'}],
         ['meta', {property: 'og:type', content: 'website'}],
         ['meta', {property: 'og:locale', content: 'en'}],
