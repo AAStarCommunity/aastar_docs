@@ -9,17 +9,11 @@ hero:
   image: "/startlogo.svg"
   actions:
     - theme: brand
-      text: Quick start
-      link: /quick-start/index.md
-    - theme: alt
-      text: API Examples
-      link: /api-examples/index.md
+      text: OverView
+      link: /introduction/architecture_overview.md
     - theme: alt
       text: Go To DashBoard
       link: https://dashboard.aastar.io/
-    - theme: alt
-      text: Introduction
-      link: /introduction/index.md 
 
 features:
   - title: Open-source 
@@ -31,13 +25,20 @@ features:
   - title: About AAStar
     icon: "🌟"
     details: AAStar is an ethereum builder community that is a subgroup of Plancker^.
-  - title: About EthPaymaster
+  - title: Project EthPaymaster
     icon:  "🔗"
     details: sponsor every tx, make the gas fee to be a history.
     link: https://ethpaymaster.org/
-  - title: About EthPaymaster
-    icon:  "🔗"
-    details: sponsor every tx, make the gas fee to be a history.
-    link: https://ethpaymaster.org/
+  - title: Project Airaccount 
+    icon: "🔗"
+    details: Airaccount is a decentralized identity system for Ethereum.
+    link: https://airaccount.org/
+  - title: Project Comet ENS 
+    icon: "🔗"
+    details: Comet ENS is a decentralized identity system for Ethereum.
+    link: https://airaccount.org/
+    
+    
+
 ---
 
