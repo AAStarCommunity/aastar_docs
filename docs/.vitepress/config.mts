@@ -1,4 +1,4 @@
-import {defineConfig, type DefaultTheme } from 'vitepress'
+import {defineConfig, type DefaultTheme} from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 
@@ -11,111 +11,106 @@ const telegramSvg = '<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" wid
 export default defineConfig({
     lang: 'en-US',
     title: "AAStar",
-    description: "Sponsor Every Tx.!",
+    description: "Abstract Account Sponsor Every Tx.!",
+    head: [
+        ['link', {rel: 'icon', type: 'image/svg+xml', href: '/startlogo.svg'}],
+        ['meta', {name: 'theme-color', content: '#5f67ee'}],
+        ['meta', {property: 'og:type', content: 'website'}],
+        ['meta', {property: 'og:locale', content: 'en'}],
+        ['meta', {property: 'og:site_name', content: 'AAStar Doc'}],
+        ['meta', {property: 'og:url', content: 'https://docs.aastar.io/'}],
+    ],
     lastUpdated: true,
     themeConfig: {
         editLink: {
-            pattern:'https://github.com/AAStarCommunity/aastar_docs/tree/main/docs/:path',
+            pattern: 'https://github.com/AAStarCommunity/aastar_docs/tree/main/docs/:path',
         },
         search: {
             provider: 'local'
         },
 
-        logo:'/startlogo.svg',
+        logo: '/startlogo.svg',
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             {text: 'Home', link: '/'},
-            {text: 'AAStar', link: 'https://aastar.io/'},
-            {text: 'ETHPaymaster', link: 'https://ETHPaymaster.org'},
+            {text: 'AAStar WebSite', link: 'https://aastar.io/'},
             {text: 'DashBoard', link: 'https://dashboard.aastar.io/'},
             {text: 'Blog', link: 'https://www.aastar.io/posts/'},
+            {text: 'Status', link: 'https://aastar.instatus.com/'},
         ],
 
-        sidebar:sidebarGuide(),
+        sidebar: sidebarGuide(),
 
         socialLinks: [
             {icon: 'github', link: 'https://github.com/AAStarCommunity'},
             {icon: 'twitter', link: 'https://twitter.com/AAStarCommunity'},
-            {icon: {svg : mediumSvg}, link: 'https://medium.com/@AAStarCommunity'},
-            {icon: {svg : telegramSvg}, link: 'https://t.me/Account_Abstraction_Community'},
+            {icon: {svg: mediumSvg}, link: 'https://medium.com/@AAStarCommunity'},
+            {icon: {svg: telegramSvg}, link: 'https://t.me/Account_Abstraction_Community'},
+            {icon: 'youtube', link: 'https://www.youtube.com/channel/UCc9ingOIgPXdV7UyCMEsoEg'}
         ]
     }
 })
+
 function sidebarGuide(): DefaultTheme.SidebarItem[] {
-    return  [
-        {
-            text: 'Overview',
-            collapsed: false,
-            items: [
-                {text: '- Architecture OverView', link: '/quick-start/index.md'},
-                {text: '- Tutorials', link: '/introduction/index.md'},
-                {text: '- FAQ', link: '/introduction/dashboard-introduction.md'},
-                {text: '- Get Start', link: '/introduction/dashboard-introduction.md'}
-            ]
-        },
-        {
-            text: 'Paymaster',
-            collapsed: false,
-            items: [
-                {text: 'API Examples', link: '/api-examples/index.md'},
-                {text: 'API list', link: '/api-list/index.md'},
-                {text: 'ChangeLog', link: '/api-list/index.md'}
-            ]
-        },
-        {
-            text: 'AirAccount',
-            collapsed: false,
-            items: [
-                {text: 'Guide ', link: '/api-examples/index.md'},
-                {text: 'ChangeLog', link: '/api-list/index.md'}
-            ]
-        },
-        {
-            text: 'Conmet Ens',
-            collapsed: false,
-            items: [
-                {text: 'Guide ', link: '/api-examples/index.md'},
-                {text: 'ChangeLog', link: '/api-list/index.md'}
-            ]
-        },
-        {
-            text: 'Out Demo',
-            collapsed: false,
-            items: [
-                {text: 'MintNFT ', link: '/api-examples/index.md'},
-                {text: 'MultiMint Token', link: '/api-examples/index.md'},
-            ]
-        }
-    ]
-}
-function sidebarReference(): DefaultTheme.SidebarItem[] {
     return [
         {
-            text: 'Reference',
+            text: '🎓INTRODUCTION',
+            collapsed: false,
             items: [
-                { text: 'Site Config', link: 'site-config' },
-                { text: 'Frontmatter Config', link: 'frontmatter-config' },
-                { text: 'Runtime API', link: 'runtime-api' },
-                { text: 'CLI', link: 'cli' },
-                {
-                    text: 'Default Theme',
-                    base: '/reference/default-theme-',
-                    items: [
-                        { text: 'Overview', link: 'config' },
-                        { text: 'Nav', link: 'nav' },
-                        { text: 'Sidebar', link: 'sidebar' },
-                        { text: 'Home Page', link: 'home-page' },
-                        { text: 'Footer', link: 'footer' },
-                        { text: 'Layout', link: 'layout' },
-                        { text: 'Badge', link: 'badge' },
-                        { text: 'Team Page', link: 'team-page' },
-                        { text: 'Prev / Next Links', link: 'prev-next-links' },
-                        { text: 'Edit Link', link: 'edit-link' },
-                        { text: 'Last Updated Timestamp', link: 'last-updated' },
-                        { text: 'Search', link: 'search' },
-                        { text: 'Carbon Ads', link: 'carbon-ads' }
-                    ]
-                }
+
+                {text: '- Architecture OverView', link: '/introduction/architecture_overview.md'},
+                {text: '- Tutorials', link: '/introduction/tutorials.md'},
+                {text: '- FAQ', link: '/introduction/faq.md'},
+            ]
+        },
+        {
+            text: '⚙️DASHBOARD',
+            collapsed: false,
+            items: [
+                {text: '- OverView', link: '/dashboard/overview.md'},
+                {text: '- Api Key', link: '/dashboard/api_key.md'},
+                {text: '- Strategy Sponsor', link: '/dashboard/sponsor_strategy.md'}
+            ]
+        },
+        {
+            text: '⛽PAYMASTER',
+            collapsed: false,
+            items: [
+                {text: '- OverView', link: '/paymaster/overview.md'},
+                {text: '- Guide', link: '/paymaster/guide.md'},
+                {text: '- RPC Methods', link: '/paymaster/rpc_methods.md'},
+                {text: '- ChangeLog', link: '/paymaster/change_log.md'},
+                {text: '- Gas Tank', link: '/paymaster/gas_tank.md'},
+                {text: '- Errors', link: '/paymaster/errors.md'},
+                {text: '- Support Chains', link: '/paymaster/support_chains.md'},
+                {text: '- Support Erc20 Token', link: '/paymaster/support_erc20_token.md'},
+                {text: '- Deploy your own Paymaster', link: '/paymaster/deploy.md'},
+            ]
+        },
+        {
+            text: '👤AIR ACCOUNT',
+            collapsed: false,
+            items: [
+                {text: '- OverView ', link: '/airaccount/overview.md'},
+                {text: '- Rpc Methods', link: '/airaccount/rpc_methods.md'},
+                {text: '- ChangeLog', link: '/airaccount/change_log.md'}
+            ]
+        },
+        {
+            text: '🔎CONMET ENS',
+            collapsed: false,
+            items: [
+                {text: '- OverView ', link: '/ens/overview.md'},
+                {text: '- Rpc Methods', link: '/ens/rpc_methods.md'},
+                {text: '- ChangeLog', link: '/ens/change_log.md'}
+            ]
+        },
+        {
+            text: '📗Our Demo',
+            collapsed: false,
+            items: [
+                {text: '- MintNFT ', link: '/demo/nft.md'},
+                {text: '- MultiMint Token', link: '/demo/token.md'},
             ]
         }
     ]
