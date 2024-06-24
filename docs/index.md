@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: OverView
-      link: /introduction/architecture_overview.md
+      link: /introduction/architecture_overview
     - theme: alt
       text: Go To DashBoard
       link: https://dashboard.aastar.io/
