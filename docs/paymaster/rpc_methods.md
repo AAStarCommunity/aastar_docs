@@ -17,8 +17,6 @@ We hope to use enumeration instead of chain Id as the identifier for the network
 No ApiKey? Here is the guide for applying for an ApiKey.
 [Apply Your API Key](../dashboard/api_key.md)
 
-## Project Sponsored
-
 JSON-RPC API reference for AAStar's  Paymaster(Verifying+Erc20) service.
 
 [pm_supportEntrypoint](#pm-supportentrypoint)
@@ -29,11 +27,9 @@ JSON-RPC API reference for AAStar's  Paymaster(Verifying+Erc20) service.
 
 [pm_estimateUserOperations](#pm-estimateUserOperations)
 
-{#pm-paymasteraccount}
-
 ## RPCMethods
 
-### 在 mounted 钩子中导入 {#importing-in-mounted-hook}
+### pm_supportEntrypoint
 
 ::: code-group
 
@@ -73,7 +69,41 @@ curl -X 'POST' \
 
 ### pm_paymasterAccount
 
+::: code-group
 
+```json[Body Request]
+{
+  "id": 0,
+  "jsonrpc": "2.0",
+  "method": "pm_paymasterAccount"
+}
+```
+
+```json[Body Response]
+{
+  "code": 200,
+  "message": "",
+  "data": [
+    "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789",
+    "0x0000000071727De22E5E9d8BAf0edAc6f37da032"
+  ],
+  "cost": "2562047h47m16.854775807s"
+}
+```
+
+```shell[curl]
+curl -X 'POST' \
+  'https://paymaster.aastar.io/api/v1/paymaster/{NETWORK_ENUM}?apiKey={YOUR-APIKEY}' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "jsonrpc": "2.0",
+  "method": "pm_paymasterAccount"
+}'
+```
+
+:::
 
 ### pm_sponsorUserOperation
 
@@ -88,7 +118,9 @@ Parameters(In order):
   * token: This is the ERC-20 token type. Not Required. If provided, the Paymaster will Run In ERC20 Mode use this token to pay for the gas fee.
   * version: This is the version of the Entrypoint (v0.6 v0.7). If not provided, the Paymaster will use the default version(v0.6)
 If Strategy_code and token are not provided, the Paymaster will Run In User Sponsor Mode.
-See Paymaster Mode for more details.[](../paymaster/guide.md)
+
+[See PaymasterMode for more details.](../paymaster/guide.md)
+
 ::: code-group
 
 ```json[Body Request]
