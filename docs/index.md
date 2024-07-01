@@ -2,7 +2,7 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
-hero:
+hero: 
   name: "AAStar Docs"
   text: "Sponsor Every Tx!"
   tagline: Leveraging the Power of Community for AA Eco!
@@ -14,6 +14,9 @@ hero:
     - theme: alt
       text: Go To DashBoard
       link: https://dashboard.aastar.io/
+    - theme: alt
+      text: Experience Demo
+      link: https://demoweb.aastar.io/
 
 features:
   - title: Open-source 
@@ -41,4 +44,3 @@ features:
     
 
 ---
-
