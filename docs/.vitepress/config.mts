@@ -65,19 +65,20 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         },
         {
             text: '⚙️DASHBOARD',
+            base:'/dashboard/',
             collapsed: false,
+            link: 'overview.md', // default link when clicking on the parent
             items: [
-                {text: '- OverView', link: '/dashboard/overview.md'},
-                {text: '- Api Key', link: '/dashboard/api_key.md'},
-                {text: '- Strategy Sponsor', link: '/dashboard/sponsor_strategy.md'}
+                {text: '- Api Key', link: 'api_key.md'},
+                {text: '- Sponsor Strategy', link: 'sponsor_strategy.md'}
             ]
         },
         {
             text: '⛽PAYMASTER',
             base:'/paymaster/',
+            link: 'overview.md', // default link when clicking on the parent
             collapsed: false,
             items: [
-                {text: '- OverView', link: 'overview'},
                 {text: '- Guide', link: 'guide'},
                 {text: '- RPC Methods', link: 'rpc_methods'},
                 {text: '- Support Chains', link: 'support_chains'},
