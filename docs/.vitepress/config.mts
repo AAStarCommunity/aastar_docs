@@ -74,17 +74,18 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         },
         {
             text: '⛽PAYMASTER',
+            base:'/paymaster/',
             collapsed: false,
             items: [
-                {text: '- OverView', link: '/paymaster/overview.md'},
-                {text: '- Guide', link: '/paymaster/guide.md'},
-                {text: '- RPC Methods', link: '/paymaster/rpc_methods.md'},
-                {text: '- ChangeLog', link: '/paymaster/change_log.md'},
-                {text: '- Gas Tank', link: '/paymaster/gas_tank.md'},
-                {text: '- Errors', link: '/paymaster/errors.md'},
-                {text: '- Support Chains', link: '/paymaster/support_chains.md'},
-                {text: '- Support Erc20 Token', link: '/paymaster/support_erc20_token.md'},
-                {text: '- Deploy your own Paymaster', link: '/paymaster/deploy.md'},
+                {text: '- OverView', link: 'overview'},
+                {text: '- Guide', link: 'guide'},
+                {text: '- RPC Methods', link: 'rpc_methods'},
+                {text: '- Support Chains', link: 'support_chains'},
+                {text: '- Support Erc20 Token', link: 'support_erc20_token'},
+                {text: '- Errors', link: 'errors'},
+                {text: '- Gas Tank', link: 'gas_tank'},
+                {text: '- ChangeLog', link: 'change_log'},
+                {text: '- Deploy your own Paymaster', link: 'deploy'},
             ]
         },
         {
