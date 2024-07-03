@@ -65,26 +65,28 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         },
         {
             text: '⚙️DASHBOARD',
+            base:'/dashboard/',
             collapsed: false,
+            link: 'overview.md', // default link when clicking on the parent
             items: [
-                {text: '- OverView', link: '/dashboard/overview.md'},
-                {text: '- Api Key', link: '/dashboard/api_key.md'},
-                {text: '- Strategy Sponsor', link: '/dashboard/sponsor_strategy.md'}
+                {text: '- Api Key', link: 'api_key.md'},
+                {text: '- Sponsor Strategy', link: 'sponsor_strategy.md'}
             ]
         },
         {
             text: '⛽PAYMASTER',
+            base:'/paymaster/',
+            link: 'overview.md', // default link when clicking on the parent
             collapsed: false,
             items: [
-                {text: '- OverView', link: '/paymaster/overview.md'},
-                {text: '- Guide', link: '/paymaster/guide.md'},
-                {text: '- RPC Methods', link: '/paymaster/rpc_methods.md'},
-                {text: '- ChangeLog', link: '/paymaster/change_log.md'},
-                {text: '- Gas Tank', link: '/paymaster/gas_tank.md'},
-                {text: '- Errors', link: '/paymaster/errors.md'},
-                {text: '- Support Chains', link: '/paymaster/support_chains.md'},
-                {text: '- Support Erc20 Token', link: '/paymaster/support_erc20_token.md'},
-                {text: '- Deploy your own Paymaster', link: '/paymaster/deploy.md'},
+                {text: '- Guide', link: 'guide'},
+                {text: '- RPC Methods', link: 'rpc_methods'},
+                {text: '- Support Chains', link: 'support_chains'},
+                {text: '- Support Erc20 Token', link: 'support_erc20_token'},
+                {text: '- Errors', link: 'errors'},
+                {text: '- Gas Tank', link: 'gas_tank'},
+                {text: '- ChangeLog', link: 'change_log'},
+                {text: '- Deploy your own Paymaster', link: 'deploy'},
             ]
         },
         {

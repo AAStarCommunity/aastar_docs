@@ -1,35 +1,38 @@
 ---
+outline: deep
 title: Paymaster RpcMethods
 lang: en-US
 ---
 
-# PayMaster Rpc Method
+## EndPoint
+
+Here is the base URL for the API calls:
+
+`
+https://paymaster.aastar.io/api/v1/paymaster/{NETWORK_ENUM}?apiKey={YOUR-APIKEY}
+`
+
+We hope to use enumeration instead of chain Id as the identifier for the network, in order to improve the readability and scalability of the interface.
+[See Our Support Network Enum](./support_chains.md)
+No ApiKey? Here is the guide for applying for an ApiKey.
+[Apply Your API Key](../dashboard/api_key.md)
 
 JSON-RPC API reference for AAStar's  Paymaster(Verifying+Erc20) service.
 
-[pm_supportEntrypoint](#pm-supportEntrypoint)
-
+[pm_supportEntrypoint](#pm-supportentrypoint)
 
 [pm_paymasterAccount](#pm-paymasteraccount)
 
-
 [pm_sponsorUserOperation](#pm-sponsoruseroperation)
 
+[pm_estimateUserOperations](#pm-estimateUserOperations)
 
-[pm_estimateUserOperations](#pm-estimateuseroperations)
+## RPCMethods
 
+### pm_supportEntrypoint
 
-Here is the base URL for the API calls:
-https://paymaster.aastar.io/api/v1/paymaster/{NETWORK_ENUM}?apiKey={YOUR-APIKEY}
-
-[See Our Support Network Enum](./support_chains.md)
-
-
-[Apply Your API Key](../dashboard/api_key.md)
-
-{#pm-paymasteraccount}
-## pm_supportEntrypoint
 ::: code-group
+
 ```json[Body Request]
 {
   "id": 0,
@@ -37,6 +40,7 @@ https://paymaster.aastar.io/api/v1/paymaster/{NETWORK_ENUM}?apiKey={YOUR-APIKEY}
   "method": "pm_supportEntrypoint"
 }
 ```
+
 ```json[Body Response]
 {
   "code": 200,
@@ -48,6 +52,7 @@ https://paymaster.aastar.io/api/v1/paymaster/{NETWORK_ENUM}?apiKey={YOUR-APIKEY}
   "cost": "2562047h47m16.854775807s"
 }
 ```
+
 ```shell[curl]
 curl -X 'POST' \
   'https://paymaster.aastar.io/api/v1/paymaster/{NETWORK_ENUM}?apiKey={YOUR-APIKEY}' \
@@ -59,24 +64,65 @@ curl -X 'POST' \
   "method": "pm_supportEntrypoint"
 }'
 ```
-:::
-## pm_paymasterAccount
 
-## pm_sponsorUserOperation
+:::
+
+### pm_paymasterAccount
+
+::: code-group
+
+```json[Body Request]
+{
+  "id": 0,
+  "jsonrpc": "2.0",
+  "method": "pm_paymasterAccount"
+}
+```
+
+```json[Body Response]
+{
+  "code": 200,
+  "message": "",
+  "data": [
+    "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789",
+    "0x0000000071727De22E5E9d8BAf0edAc6f37da032"
+  ],
+  "cost": "2562047h47m16.854775807s"
+}
+```
+
+```shell[curl]
+curl -X 'POST' \
+  'https://paymaster.aastar.io/api/v1/paymaster/{NETWORK_ENUM}?apiKey={YOUR-APIKEY}' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "jsonrpc": "2.0",
+  "method": "pm_paymasterAccount"
+}'
+```
+
+:::
+
+### pm_sponsorUserOperation
 
 > [!WARNING]
 > Paymaster Signature will expire in 5 mins
 
-
 Parameters(In order):
+
 * UserOperation: This is a User Operation with a valid dummy signature.
 * Extra Data: This is a JSON object with the following fields:
   * strategy_code: This is the strategy code you apply. In provided, the Paymaster will Run In Sponsor Mode use this strategy to sponsor the User Operation.
   * token: This is the ERC-20 token type. Not Required. If provided, the Paymaster will Run In ERC20 Mode use this token to pay for the gas fee.
   * version: This is the version of the Entrypoint (v0.6 v0.7). If not provided, the Paymaster will use the default version(v0.6)
 If Strategy_code and token are not provided, the Paymaster will Run In User Sponsor Mode.
-See Paymaster Mode for more details.[](../paymaster/guide.md)
+
+[See PaymasterMode for more details.](../paymaster/guide.md)
+
 ::: code-group
+
 ```json[Body Request]
 {
     "id": 0,
@@ -103,6 +149,7 @@ See Paymaster Mode for more details.[](../paymaster/guide.md)
     ]
 }
 ```
+
 ```json[Body Response]
 {
   "code": 200,
@@ -130,6 +177,7 @@ See Paymaster Mode for more details.[](../paymaster/guide.md)
   "cost": "2562047h47m16.854775807s"
 }
 ```
+
 ```shell[curl]
 curl -X 'POST' \
   'http://localhost/api/v1/paymaster/{NETWORK_ENUM}?apiKey={YOUR-APIKEY}' \
@@ -161,4 +209,4 @@ curl -X 'POST' \
 }'
 ```
 
-## pm_estimateUserOperationGas
+### pm_estimateUserOperationGas
