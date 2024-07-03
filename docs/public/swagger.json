@@ -1,0 +1,201 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {
+            "name": "AAStar Support",
+            "url": "https://aastar.xyz"
+        }
+    },
+    "basePath": "/api",
+    "paths": {
+        "/api/healthz": {
+            "get": {
+                "description": "Get Healthz",
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Healthz"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/v1/paymaster/{network}": {
+            "post": {
+                "description": "Paymaster JSON-RPC API",
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Paymaster"
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Network",
+                        "name": "network",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "JsonRpcRequest Model",
+                        "name": "rpcRequest",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/model.JsonRpcRequest"
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "description": "apiKey",
+                        "name": "apiKey",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/v1/paymaster_sponsor/deposit": {
+            "post": {
+                "description": "Deposit Sponsor",
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "DepositSponsor"
+                ],
+                "parameters": [
+                    {
+                        "description": "DepositSponsorRequest Model",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/model.DepositSponsorRequest"
+                        }
+                    },
+                    {
+                        "type": "string",
+                        "description": "relay Request  Body Hash",
+                        "name": "relay_hash",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "description": "relay Request  Body Hash",
+                        "name": "relay_signature",
+                        "in": "header"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/v1/paymaster_sponsor/withdraw": {
+            "post": {
+                "description": "Withdraw Sponsor",
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Sponsor"
+                ],
+                "parameters": [
+                    {
+                        "description": "WithdrawSponsorRequest Model",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/model.WithdrawSponsorRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "model.DepositSponsorRequest": {
+            "type": "object",
+            "properties": {
+                "deposit_source": {
+                    "type": "string"
+                },
+                "is_test_net": {
+                    "type": "boolean"
+                },
+                "pay_user_id": {
+                    "type": "string"
+                },
+                "time_stamp": {
+                    "type": "integer"
+                },
+                "tx_hash": {
+                    "type": "string"
+                }
+            }
+        },
+        "model.JsonRpcRequest": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "jsonrpc": {
+                    "type": "string"
+                },
+                "method": {
+                    "type": "string"
+                },
+                "params": {
+                    "type": "array",
+                    "items": {}
+                }
+            }
+        },
+        "model.WithdrawSponsorRequest": {
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "type": "number"
+                },
+                "deposit_source": {
+                    "type": "string"
+                },
+                "is_test_net": {
+                    "type": "boolean"
+                },
+                "pay_user_id": {
+                    "type": "string"
+                },
+                "refund_address": {
+                    "type": "string"
+                },
+                "time_stamp": {
+                    "type": "integer"
+                },
+                "withdraw_source": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
