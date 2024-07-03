@@ -37,6 +37,7 @@ export default defineConfig({
             {text: 'DashBoard', link: 'https://dashboard.aastar.io/'},
             {text: 'Blog', link: 'https://www.aastar.io/posts/'},
             {text: 'Status', link: 'https://aastar.instatus.com/'},
+            {text: 'API', link: '/api.html'},
         ],
 
         sidebar: sidebarGuide(),
