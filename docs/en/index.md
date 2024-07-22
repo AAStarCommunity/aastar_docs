@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: OverView
-      link: /introduction/architecture_overview
+      link: /en/introduction/architecture_overview
     - theme: alt
       text: Go To DashBoard
       link: https://dashboard.aastar.io/
@@ -30,15 +30,15 @@ features:
     details: AAStar is an ethereum builder community that is a subgroup of Plancker^.
   - title: Project EthPaymaster
     icon:  "🔗"
-    details: sponsor every tx, make the gas fee to be a history.
+    details: ETHPaymaster is a decentralized gas sponsor framework for Ethereum ecosystem.
     link: https://ethpaymaster.org/
   - title: Project Airaccount 
     icon: "🔗"
-    details: Airaccount is a decentralized identity system for Ethereum.
+    details: AirAccount is an Ethereum account solution for end users, project launchers.
     link: https://airaccount.org/
   - title: Project Comet ENS 
     icon: "🔗"
-    details: Comet ENS is a decentralized identity system for Ethereum.
+    details: Comet ENS is a quick way to make your complicated address readable.
     link: https://airaccount.org/
     
     
