@@ -46,10 +46,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             base:'/en/introduction/',
             collapsed: false,
             items: [
-                {text: '- What is Account Abstract', link: '/aa_intro.md'},
-                {text: '- Architecture OverView', link: '/architecture_overview.md'},
-                {text: '- Tutorials', link: '/tutorials.md'},
-                {text: '- FAQ', link: '/faq.md'},
+                {text: '- What is Account Abstract', link: 'aa_intro.md'},
+                {text: '- Architecture OverView', link: 'architecture_overview.md'},
+                {text: '- Tutorials', link: 'tutorials.md'},
+                {text: '- FAQ', link: 'faq.md'},
             ]
         },
         {
