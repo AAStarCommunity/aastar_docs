@@ -2,6 +2,8 @@
 outline: deep
 ---
 
+![alt text](../../public/image/aastr_architecture.png)
+
 # Deployment
 
 A simple deployment schema for common sponsor service runner or project customer grant sponsor runner.
