@@ -110,7 +110,17 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         },
         {
             "text": "price",
-            link: "/zh/price.md"
+            link: "/en/price.md"
+        },
+        {
+            text: "SDKS",
+            collapsed: false,
+            base:'/en/sdks/',
+            items: [
+                {text: '- TS-SDK ', link: 'ts-sdk.md'},
+                {text: '- GO-SDK', link: 'go-sdk.md'},
+                {text: '- Flutter-SDK', link: 'flutter-sdk.md'},
+            ]
         }
     ]
 }
