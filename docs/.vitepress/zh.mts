@@ -25,8 +25,8 @@ export const zh = defineConfig({
         },
         // https://vitepress.dev/reference/default-theme-config
         nav: [
-            {text: 'Home', link: '/'},
-            {text: 'AAStar 官网', link: 'https://aastar.io/'},
+            {text: '主页', link: '/'},
+            {text: '官网', link: 'https://aastar.io/'},
             {text: '仪表板', link: 'https://dashboard.aastar.io/'},
             {text: '博客', link: 'https://www.aastar.io/posts/'},
             {text: '状态', link: 'https://aastar.instatus.com/'},
@@ -46,8 +46,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             base:'/zh/introduction/',
             collapsed: false,
             items: [
-
-                {text: '- 架构 概览', link: 'architecture_overview.md'},
+                {text: '- 什么是账户抽象？', link: 'architecture_overview.md'},
+                {text: '- 概览', link: 'architecture_overview.md'},
                 {text: '- 教程', link: 'tutorials.md'},
                 {text: '- 答疑', link: 'faq.md'},
             ]
@@ -112,6 +112,10 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: '- MintNFT ', link: 'nft.md'},
                 {text: '- MultiMint Token', link: 'token.md'},
             ]
+        },
+        {
+            "text": "价格",
+            link: "/zh/price.md"
         }
     ]
 }
