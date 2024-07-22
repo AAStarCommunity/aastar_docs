@@ -46,7 +46,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             base:'/zh/introduction/',
             collapsed: false,
             items: [
-                {text: '- 什么是账户抽象？', link: 'architecture_overview.md'},
+                {text: '- 什么是账户抽象？', link: 'aa_intro'},
                 {text: '- 概览', link: 'architecture_overview.md'},
                 {text: '- 教程', link: 'tutorials.md'},
                 {text: '- 答疑', link: 'faq.md'},
@@ -114,8 +114,18 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             ]
         },
         {
-            "text": "价格",
+            text: "价格",
             link: "/zh/price.md"
+        },
+        {
+            text: "SDKS",
+            collapsed: false,
+            base:'/zh/sdks/',
+            items: [
+                {text: '- TS-SDK ', link: 'ts-sdk.md'},
+                {text: '- GO-SDK', link: 'go-sdk.md'},
+                {text: '- Flutter-SDK', link: 'flutter-sdk.md'},
+            ]
         }
     ]
 }
