@@ -116,6 +116,16 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         {
             "text": "价格",
             link: "/zh/price.md"
+        },
+        {
+            text: "SDKS",
+            collapsed: false,
+            base:'/zh/sdks/',
+            items: [
+                {text: '- TS-SDK ', link: 'ts-sdk.md'},
+                {text: '- GO-SDK', link: 'go-sdk.md'},
+                {text: '- Flutter-SDK', link: 'flutter-sdk.md'},
+            ]
         }
     ]
 }
