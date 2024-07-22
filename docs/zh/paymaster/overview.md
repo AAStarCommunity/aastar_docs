@@ -3,6 +3,23 @@ OverView
 Erc20Paymater
 GasSponsorPaymaster
 
+paymaster 服务使 Dapps 能够赞助交易，还允许用户使用 ERC-20 代币作为 gas 支付费用。登录 Biconomy 仪表板以获取 paymaster URL，并在我们的赞助和代币 Paymaster 之间切换模式。利用不同的支出限额来自定义付款主管使用情况。
+Paymaster 有三种模式
+* Project Sponsor Mode :
+* Token  Mode: 
+* User Sponsor Mode : 
+
+
+
+ETHPaymaster as a composable module for Ethereum, comprises three parts:
+
+1. Relay
+    1. A server to sign UserOps and maintain gas car(gas tank) account balance.
+2. Contract
+    1. A contract to communicate with Entrypoint and verify the signature maintain fee(deduction and refund). 3. Dashboard
+    2. A terminal to show visualized data and set the sponsor strategies.
+
+
 # What is ETHPaymaster?
 
 ## Introduction
