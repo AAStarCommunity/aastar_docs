@@ -1,92 +1,29 @@
-OverView
 
-Erc20Paymater
-GasSponsorPaymaster
+# Paymaster
+我们的支付主管允许项目赞助用户操作，我们在链上赞助，并在链下验证和扣除项目余额。使用我们的标准API端点向支付主管请求赞助。
+## 端点
 
-paymaster 服务使 Dapps 能够赞助交易，还允许用户使用 ERC-20 代币作为 gas 支付费用。登录 Biconomy 仪表板以获取 paymaster URL，并在我们的赞助和代币 Paymaster 之间切换模式。利用不同的支出限额来自定义付款主管使用情况。
-Paymaster 有三种模式
-* Project Sponsor Mode :
-* Token  Mode: 
-* User Sponsor Mode : 
+以下是用于 API 调用的基本 URL：
+https://paymaster.aastar.io/api/v1/paymaster/{NETWORK_ENUM}?apiKey={YOUR-APIKEY}
+我们希望使用枚举而不是链 ID 作为网络的标识符，以提高接口的可读性和可扩展性。
+`https://paymaster.aastar.io/api/v1/paymaster/{NETWORK_ENUM}?apiKey={YOUR-APIKEY}`
 
+没有 ApiKey？这里是申请 ApiKey 的[指南](../dashboard/api_key.md)。申请您的 API 密钥。
 
+要使用Paymaster能力 您需要登录AAstar仪表板以获取您的 paymaster URL，获取APIKey，并配置您自定义的赞助策略
+## 模式
+ AAStar Paymaster有三种模式
+## 项目赞助模式 :  
+项目方代表用户支付gas ，无需用户支付原生代币，如何配置您的赞助策略 请查看 [Source](../dashboard/sponsor_strategy.md)
 
-ETHPaymaster as a composable module for Ethereum, comprises three parts:
+ ## 代币赞助模式 :  
+  我们允许项目方的用户使用他们 自己的Erc20 代币支付自己的gas费用，[查看我们支持的Token代币](support_erc20_token.md) 
+## 用户赞助模式 :  
+  我们允许用户 通过渠道或者活动获取我们的Gas支付卡后，拥有自己的gas代付余额，无需项目方支付gas，通过扣减的用户gas加油卡的存储余额 为自己支付gas
 
-1. Relay
-    1. A server to sign UserOps and maintain gas car(gas tank) account balance.
-2. Contract
-    1. A contract to communicate with Entrypoint and verify the signature maintain fee(deduction and refund). 3. Dashboard
-    2. A terminal to show visualized data and set the sponsor strategies.
-
-
-# What is ETHPaymaster?
-
-## Introduction
-
-**AAStar** is committed to providing AA capability component public goods for Ethereum, try to answer the question: **How can we improve Ethereum accounts to fit into the future of mass adoption?**
-
-**ETHPaymaster** is a project supporting gas sponsors with cross-chain, multi-protocol, multi-type accounts, and more features, including smart contracts, relay, dashboard with control rules and one-key deployed docker images.
-
-### Strength
-
-Compared to the Business, Closed Source, and Central Relay Paymasters, ETHPaymaster provides a Community, Open Source, Decentralized Paymaster Framework to Sponsor Every Transaction.
-
-The **unique** ETHPaymaster strengths for Ethereum are:
-
-1. System improvements in gas sponsor UX(NFT, ENS), Cost(Gas Tank), and Security(Alert).
-2. Weak censorship for transaction gas sponsorship(Sponsor any transaction with one-key deployment).
-3. Diversity ERC20 gas sponsor market(Projects can support their ERC20 with gas sponsorship).
-4. Lower dev cost to gas sponsor ability for DApps(SDK and ENS contract).
-
-### Flow
-
-![](https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202403052039293.png)
-
-## More
-
-[full list of APIs](../paymaster/rpc_methods.md ).
+## 如何触发模式 ：
+* 项目赞助模式： 在Payaster  Sponsor接口参数指定Paymaster 的赞助策略唯一Code，即为项目代表用户支付Gas
+* 代币赞助模式： 在Paymaster [Sponsor接口](rpc_methods.md)参数中指定 Paymaster 支持Token的[枚举](support_erc20_token.md) 即可触发代币赞助模式，使用指定的用户Token 进行支付 
+* 用户赞助模式： 不指定策略Code 也不指定代币时，默认使用用户赞助模式，使用用户的个人gas油箱额度支付gas
 
 
----
-outline: deep
----
-
-# Runtime API Examples
-
-This page demonstrates usage of some of the runtime APIs provided by VitePress.
-
-The main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:
-
-```md
-<script setup>
-import { useData } from 'vitepress'
-
-const { theme, page, frontmatter } = useData()
-</script>
-
-## Results
-
-### Theme Data
-<pre>{{ theme }}</pre>
-
-### Page Data
-<pre>{{ page }}</pre>
-
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
-```
-
-<script setup>
-import { useData } from 'vitepress'
-
-const { site, theme, page, frontmatter } = useData()
-</script>
-
-## Results
-
-
-
-## More
-
-Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).

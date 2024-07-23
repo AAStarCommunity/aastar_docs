@@ -210,3 +210,12 @@ curl -X 'POST' \
 ```
 
 ### pm_estimateUserOperationGas
+
+
+## ERC-7677 Paymaster Web Service Capability
+
+AAStar Paymaster supports the ERC-7677 standard, which is a payment steward function compliant with the EIP-5792 standard, used to standardize interactions between wallets and ERC-4337 Paymaster Web services.
+### pm_getPaymasterStubData
+Coming
+### pm_getPaymasterData
+Coming

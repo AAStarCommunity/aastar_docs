@@ -1,24 +1,8 @@
 ---
 outline: deep
 title: Paymaster RpcMethods
-lang: en-US
 ---
-
-## EndPoint
-
-Here is the base URL for the API calls:
-
-`
-https://paymaster.aastar.io/api/v1/paymaster/{NETWORK_ENUM}?apiKey={YOUR-APIKEY}
-`
-
-We hope to use enumeration instead of chain Id as the identifier for the network, in order to improve the readability and scalability of the interface.
-[See Our Support Network Enum](./support_chains.md)
-No ApiKey? Here is the guide for applying for an ApiKey.
-[Apply Your API Key](../dashboard/api_key.md)
-
-JSON-RPC API reference for AAStar's  Paymaster(Verifying+Erc20) service.
-
+AAStar的Paymaster(验证+Erc20)服务的JSON-RPC API参考。
 [pm_supportEntrypoint](#pm-supportentrypoint)
 
 [pm_paymasterAccount](#pm-paymasteraccount)
@@ -210,3 +194,14 @@ curl -X 'POST' \
 ```
 
 ### pm_estimateUserOperationGas
+
+
+
+
+## ERC-7677 Paymaster Web Service Capability
+
+AAStar Paymaster 支持 ERC-7677 标准，这是符合 EIP-5792 标准的付款主管功能，用于标准化钱包和 ERC-4337 Paymaster Web 服务之间的交互。
+### pm_getPaymasterStubData
+Coming
+### pm_getPaymasterData
+Coming

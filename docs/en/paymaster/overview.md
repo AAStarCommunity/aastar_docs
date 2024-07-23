@@ -1,75 +1,26 @@
-OverView
+# Paymaster
+Our payment supervisor allows project sponsor users to operate. We sponsor on-chain and verify and deduct project balance off-chain. Use our standard API endpoint to request sponsorship from the paymaster.
+## Endpoint
 
-Erc20Paymater
-GasSponsorPaymaster
+Here is the basic URL for API calls:
+https://paymaster.aastar.io/api/v1/paymaster/{NETWORK_ENUM}?apiKey={YOUR-APIKEY}
+We prefer using enums as network identifiers instead of chain IDs to improve interface readability and scalability.
+`https://paymaster.aastar.io/api/v1/paymaster/{NETWORK_ENUM}?apiKey={YOUR-APIKEY}`
 
-# What is ETHPaymaster?
+No ApiKey? Here is a guide on how to apply for an ApiKey [here](../dashboard/api_key.md). Apply for your API key.
 
-## Introduction
+To use Paymaster capabilities, you need to log in to the AAstar dashboard to get your paymaster URL, obtain an API Key, and configure your custom sponsorship strategy.
+## Modes
+AAStar Paymaster has three modes:
+## Project Sponsorship Mode:  
+The project representative pays gas fees on behalf of users without users needing to pay native tokens. For configuring your sponsorship strategy, please refer to [Source](../dashboard/sponsor_strategy.md)
 
-**AAStar** is committed to providing AA capability component public goods for Ethereum, try to answer the question: **How can we improve Ethereum accounts to fit into the future of mass adoption?**
+ ## Token Sponsorship Mode:  
+  We allow users of project parties to use their own Erc20 tokens for paying their gas fees. Check out the list of supported token tokens [here](support_erc20_token.md) 
+## User Sponsorship Mode:  
+  We allow users who have obtained our Gas payment card through channels or activities to have their own gas prepayment balance. The project party does not need to pay gas; they can pay with deducted user gas top-up card storage balance.
 
-**ETHPaymaster** is a project supporting gas sponsors with cross-chain, multi-protocol, multi-type accounts, and more features, including smart contracts, relay, dashboard with control rules and one-key deployed docker images.
-
-### Strength
-
-Compared to the Business, Closed Source, and Central Relay Paymasters, ETHPaymaster provides a Community, Open Source, Decentralized Paymaster Framework to Sponsor Every Transaction.
-
-The **unique** ETHPaymaster strengths for Ethereum are:
-
-1. System improvements in gas sponsor UX(NFT, ENS), Cost(Gas Tank), and Security(Alert).
-2. Weak censorship for transaction gas sponsorship(Sponsor any transaction with one-key deployment).
-3. Diversity ERC20 gas sponsor market(Projects can support their ERC20 with gas sponsorship).
-4. Lower dev cost to gas sponsor ability for DApps(SDK and ENS contract).
-
-### Flow
-
-![](https://raw.githubusercontent.com/jhfnetboy/MarkDownImg/main/img/202403052039293.png)
-
-## More
-
-[full list of APIs](../paymaster/rpc_methods.md ).
-
-
----
-outline: deep
----
-
-# Runtime API Examples
-
-This page demonstrates usage of some of the runtime APIs provided by VitePress.
-
-The main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:
-
-```md
-<script setup>
-import { useData } from 'vitepress'
-
-const { theme, page, frontmatter } = useData()
-</script>
-
-## Results
-
-### Theme Data
-<pre>{{ theme }}</pre>
-
-### Page Data
-<pre>{{ page }}</pre>
-
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
-```
-
-<script setup>
-import { useData } from 'vitepress'
-
-const { site, theme, page, frontmatter } = useData()
-</script>
-
-## Results
-
-
-
-## More
-
-Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).
+## How To Trigger Modes:
+* Project Sponsorship Mode: Specify the unique code of the Payaster's sponsorship strategy in the parameters of the Sponsor interface at Payaster, which means that projects represent users' payments for Gas.
+* Token Sponsorship Mode: Specify in the parameters of Payaster's [Sponsor interface](rpc_methods.md) that it supports Tokens' enumeration[support_erc20_token.md]to trigger token sponsorship mode using specified user Tokens for payment.
+* User Sponsorship Mode: If no strategy code or token is specified, by default, user sponsorship mode will be used where personal gas tank limits are used for paying gas.
