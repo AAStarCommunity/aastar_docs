@@ -1,56 +1,22 @@
 ---
-outline: deep
 ---
-
-
-
 # Dashboard
-DashBoard is your gateway to access our services such us paymaster,Airaccount, And monitor your product
-
-
-We will provide a open-source framework to run your own gas sponsor service with one-key deployment.
-Dashboard is one of the important components for data visualization.
-
-
-## Fow who?
-
-We have different terminals which service for different target users.
-Now we open dashboard for individual sponsors, we will open dashboard for terminal users and project runners and more later.
-
-### Individual Sponsor
-
-As a individual sponsor, you will run a signature service at a relay server based on our ETHPaymaster framework.
-Any developers want a gas sponsorship service, just send their UserOps to your API.
-
-#### API management
-
-##### Apply
-
-Access this URL: [Get API key ](https://ethpaymaster.org/dash/apikey)
-
-1. Input your Email, project website and  daily user transaction number
-2. need attachment to verify, like snapshot, contract address in EtherScan), submit the form.
-3. The maintainer will check and give a manually or automatically answer.
-4. You will get a key like this in your Email:
-
-```md
-Access key: 30f60d8f-cb72-4cf1-ab72-eccaa5142c68
-
-```
+The dashboard is where you can view your API keys for our services (such as Paymaster, Airaccount), monitor product entrances, and recharge your Paymaster balance to sponsor transactions.
 
 
 # Login
-The Dashboard can be found in  https://dashboard.aastar.io/. Serval sign in options are Avaliable including Gihub,..
-![alt text](image.png)
+You can find the dashboard at https://dashboard.aastar.io/. Various login options are available including GitHub. ![alt text](image.png)
+
+![alt text](../../public/image/dashbaord_home.png)
+On the homepage, you can check your interface overview data and API overview information. Click on the API ViewMetric button to query detailed status and monitoring of the current API.
+![alt text](../../public/image/dashboard_api_key_metrics.png)
 
 
-# Apply And Config Your APIKey
+In the following sections, we will introduce the following concepts more systematically:
 
-
-
-# Monitor Your Service
-
-
-
-# Config your Sponsor Strateies And Deposit Your Tank
-
+::: tip
+Apply for an API Key and obtain URLs for services you need (Paymaster, Airaccount) [source](api_key.md)
+:::
+::: tip
+Recharge your Paymaster account and configure your sponsorship strategy [source](sponsor_strategy.md)
+:::

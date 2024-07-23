@@ -1,56 +1,24 @@
 ---
-outline: deep
 ---
+# 仪表板
+仪表板是您我们的服务（如支付主管、Airaccount） 查看你的API 密钥，以及监控产品的入口，此外您可以在这里充值您的Paymaster额度以赞助交易
+
+
+# 登录
+可以在 https://dashboard.aastar.io/ 找到仪表板。包括GitHub等多种登录选项可用。。![alt text](image.png)
+
+![alt text](../../public/image/dashbaord_home.png)
+在主页中您可以查询您的接口概览数据信息，和API概览信息，点击API ViewMetric 按钮 查询当前API的详细状态和监控
+![alt text](../../public/image/dashboard_api_key_metrics.png)
 
 
 
-# Dashboard
-DashBoard is your gateway to access our services such us paymaster,Airaccount, And monitor your product
 
+在以下各节中，我们将更系统地介绍以下概念：
 
-We will provide a open-source framework to run your own gas sponsor service with one-key deployment.
-Dashboard is one of the important components for data visualization.
-
-
-## Fow who?
-
-We have different terminals which service for different target users.
-Now we open dashboard for individual sponsors, we will open dashboard for terminal users and project runners and more later.
-
-### Individual Sponsor
-
-As a individual sponsor, you will run a signature service at a relay server based on our ETHPaymaster framework.
-Any developers want a gas sponsorship service, just send their UserOps to your API.
-
-#### API management
-
-##### Apply
-
-Access this URL: [Get API key ](https://ethpaymaster.org/dash/apikey)
-
-1. Input your Email, project website and  daily user transaction number
-2. need attachment to verify, like snapshot, contract address in EtherScan), submit the form.
-3. The maintainer will check and give a manually or automatically answer.
-4. You will get a key like this in your Email:
-
-```md
-Access key: 30f60d8f-cb72-4cf1-ab72-eccaa5142c68
-
-```
-
-
-# Login
-The Dashboard can be found in  https://dashboard.aastar.io/. Serval sign in options are Avaliable including Gihub,..
-![alt text](image.png)
-
-
-# Apply And Config Your APIKey
-
-
-
-# Monitor Your Service
-
-
-
-# Config your Sponsor Strateies And Deposit Your Tank
-
+::: tip
+申请 APIKey 并获取您需要的服务（paymaster，airaccount，）的URL [source](api_key.md)
+:::
+::: tip
+充值你的Paymaster 由箱 并配置您的赞助策略 [source](sponsor_strategy.md)
+:::

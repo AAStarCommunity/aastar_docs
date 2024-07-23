@@ -58,6 +58,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             link: 'overview.md', // default link when clicking on the parent
             items: [
+                {text: '- OverView', link: 'overview.md'},
                 {text: '- Api Key', link: 'api_key.md'},
                 {text: '- Sponsor Strategy', link: 'sponsor_strategy.md'}
             ]
