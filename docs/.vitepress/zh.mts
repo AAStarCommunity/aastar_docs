@@ -46,7 +46,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             base:'/zh/introduction/',
             collapsed: false,
             items: [
-                {text: '- 什么是账户抽象？', link: 'architecture_overview.md'},
+                {text: '- 什么是账户抽象？', link: 'aa_intro.md'},
                 {text: '- 概览', link: 'architecture_overview.md'},
                 {text: '- 教程', link: 'tutorials.md'},
                 {text: '- 答疑', link: 'faq.md'},
@@ -75,7 +75,6 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
                 {text: '- 支持的网络', link: 'support_chains'},
                 {text: '- 支持的Erc20 Token', link: 'support_erc20_token'},
                 {text: '- 错误 解释', link: 'errors'},
-                {text: '- 汽油箱', link: 'gas_tank'},
                 {text: '- 变更日志', link: 'change_log'},
                 {text: '- 部署您自己的Paymaster', link: 'deploy'},
             ]

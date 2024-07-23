@@ -68,12 +68,12 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             link: 'overview.md', // default link when clicking on the parent
             collapsed: false,
             items: [
+                {text: '- Overview', link: 'overview'},
                 {text: '- Guide', link: 'guide'},
                 {text: '- RPC Methods', link: 'rpc_methods'},
                 {text: '- Support Chains', link: 'support_chains'},
                 {text: '- Support Erc20 Token', link: 'support_erc20_token'},
                 {text: '- Errors', link: 'errors'},
-                {text: '- Gas Tank', link: 'gas_tank'},
                 {text: '- ChangeLog', link: 'change_log'},
                 {text: '- Deploy your own Paymaster', link: 'deploy'},
             ]

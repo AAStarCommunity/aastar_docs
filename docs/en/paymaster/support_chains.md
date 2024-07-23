@@ -1,10 +1,5 @@
 # Support Chains
 
-Our Paymaster Allow Project Sponsor UserOp ,we sponsor on chain, validate and deduct project balance off chain.
-use Our standard api endpoint to ask paymaster for Sponsor
-`https://paymaster.aastar.io/api/v1/paymaster/{NETWORK_ENUM}?apiKey={YOUR-APIKEY}`
-Here following chains are supported.
-
 ## Network Support
 
 | Chain     | ChainId  |     NETWORK_ENUM | Status | Is Main Net |
