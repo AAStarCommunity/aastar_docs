@@ -43,7 +43,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
     return [
         {
             text: '🎓INTRODUCTION',
-            base:'/en/introduction/',
+            base:'/introduction/',
             collapsed: false,
             items: [
                 {text: '- What is Account Abstract', link: 'aa_intro.md'},
@@ -54,7 +54,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         },
         {
             text: '⚙️DASHBOARD',
-            base:'/en/dashboard/',
+            base:'/dashboard/',
             collapsed: false,
             link: 'overview.md', // default link when clicking on the parent
             items: [
@@ -64,7 +64,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         },
         {
             text: '⛽PAYMASTER',
-            base:'/en/paymaster/',
+            base:'/paymaster/',
             link: 'overview.md', // default link when clicking on the parent
             collapsed: false,
             items: [
@@ -81,7 +81,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         {
             text: '👤AIR ACCOUNT',
             collapsed: false,
-            base:'/en/airaccount/',
+            base:'/airaccount/',
             link: 'overview.md', // default link when clicking on the parent
             items: [
                 {text: '- OverView ', link: 'overview.md'},
@@ -91,7 +91,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         },
         {
             text: '🔎CONMET ENS',
-            base:'/en/ens/',
+            base:'/ens/',
             link: 'overview.md', // default link when clicking on the parent
             collapsed: false,
             items: [
@@ -110,12 +110,12 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         },
         {
             "text": "price",
-            link: "/en/price.md"
+            link: "/price.md"
         },
         {
             text: "SDKS",
             collapsed: false,
-            base:'/en/sdks/',
+            base:'/sdks/',
             items: [
                 {text: '- TS-SDK ', link: 'ts-sdk.md'},
                 {text: '- GO-SDK', link: 'go-sdk.md'},

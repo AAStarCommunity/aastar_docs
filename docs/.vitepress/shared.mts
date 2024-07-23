@@ -18,7 +18,7 @@ export const shared = defineConfig({
     metaChunk: true,
 
     sitemap: {
-        hostname: 'http://localhost:5173/',
+        hostname: 'https://docs.aastar.io/',
         transformItems(items) {
             return items.filter((item) => !item.url.includes('migration'))
         }
