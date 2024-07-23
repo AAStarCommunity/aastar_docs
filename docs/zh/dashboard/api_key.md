@@ -1,41 +1,18 @@
 
-##### Settings
+# API KEY
 
-**Block list**
-A list which was hacker or bad guys will be blocked.
-
-**Star time/ End time**
-The strategy(series of settings) start and end time.
-
-**Limitations**
-Global Maximums
-Set the total amount of USD or Native Tokens you are willing to sponsor.
-
-Per User Maximum
-Set the amount of USD or Native Tokens you are willing to sponsor per user.
-
-Per User Operation Maximum
-Set the amount of USD or Native Tokens you are willing to sponsor per user operation.
-
-On-chain call enabled
-Make an on-chain call to determine whether a user operation should be sponsored.
+![alt text](../../public/image/apikye_list.png)
+进入APIkey 列表 您可以查询你所有的APikey ，获取信息的apikey ，查看或者copy 您的apikey ，
 
 
 
+同时获取您的apikey 在各个网络下各个服务下对应的RPC URL
+![alt text](../../public/image/apikey_get_url.png)
 
-##### Rules
 
-Some specific rules in common transactions.
+你可以配置你的apikey 的详细信息 和 一些限制
+如ip和域名的白名单，是否允许paymaster 或者airaccount
 
-**Mode**
-**Individual Single mode** 
-It will service for all input transactions with a single gas payment every time.
-It means the sender address must have USDT and ERC20 firstly with pre approvement.
+![alt text](../../public/image/api_key_edit.png)
 
-**Gas tank mode**
-We merge this mode into NFT mode.
-
-**NFT mode**
-It should send NFT to the sender address, the NFT is published by ETHPaymaster official on-chain NFT contract.
-To get the special NFT, buy from official website or on cooperation community interface.
 

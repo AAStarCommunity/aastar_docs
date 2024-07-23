@@ -58,8 +58,9 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             link: 'overview.md', // default link when clicking on the parent
             items: [
-                {text: '- Api Key', link: 'api_key.md'},
-                {text: '- 赞助 策略', link: 'sponsor_strategy.md'}
+                {text: '-  概览', link: 'overview'},
+                {text: '- Api Key', link: 'api_key'},
+                {text: '- 赞助 策略', link: 'sponsor_strategy'}
             ]
         },
         {
