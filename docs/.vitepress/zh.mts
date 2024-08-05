@@ -30,7 +30,7 @@ export const zh = defineConfig({
             {text: '仪表板', link: 'https://dashboard.aastar.io/'},
             {text: '博客', link: 'https://www.aastar.io/posts/'},
             {text: '状态', link: 'https://aastar.instatus.com/'},
-            {text: '接口', link: 'https://docs.aastar.io/api.html'},
+            {text: '接口', link: 'https://aastar-docs.readme.io/'},
         ],
 
         sidebar: sidebarGuide(),

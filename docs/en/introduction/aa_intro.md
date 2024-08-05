@@ -17,6 +17,7 @@ By implementing the ERC-4337 interface, contracts can customize various aspects 
 
 > [!TIP] 📘Need more detailed information?
 > You can check out EIPFun's introduction and information compilation on 4337 at https://eip.fun/eips/eip-4337
+> Query more developer-oriented 4337 information at https://docs.stackup.sh/docs/erc-4337-guides
 
 ## EIP 7702 
 Coming
